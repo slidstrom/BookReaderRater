@@ -7,7 +7,7 @@
 
 import Foundation
 
-class BookModel : ObservableObject {
+class BookModel: ObservableObject {
     
     @Published var books = [Book]()
     
@@ -19,7 +19,7 @@ class BookModel : ObservableObject {
     }
     
     func updateFav(forId: Int){
-        if let index = books.firstIndex(where: {$0.id == forId}){
+        if let index = books.firstIndex(where: { $0.id == forId }){
             books[index].isFavourite.toggle()
         }
             
